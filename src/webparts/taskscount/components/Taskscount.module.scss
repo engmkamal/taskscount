@@ -1,0 +1,102 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.taskscount {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.welcome {
+  text-align: center;
+}
+
+.welcomeImage {
+  width: 80px;
+  height: 130px;
+  margin: 1px;
+  background-image: url("../assets/lttask.png");
+  //background-image: url("https://zlhzl.sharepoint.com/_layouts/15/images/lttask.png?rev=47");
+  background-repeat: no-repeat;
+}
+
+.links {
+  a {
+    text-decoration: none!important;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.text {
+  color:white; 
+  text-decoration: none;
+}
+
+.container {
+  background-color:#339966; 
+  color:white; 
+  width:100%; 
+  height:100px; 
+  border-radius:3px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.imgDiv{
+  width: 90%;
+  height: 80px;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+.textDiv{
+  margin-top: 150px;  
+  margin-left: 180px;
+}
+
+.flexContainer {
+  display: flex;
+  width: 98%;
+}
+
+.flexChild {
+  flex: 1;
+  border: none;
+}  
+
+.flexChild:first-child {
+  margin-right: 20px;
+} 
+
+.flexChildTxt {
+  flex: 3;
+  border: none;
+  padding-top: 35px;
+  font-size: 20px;
+} 
+
+.flexCount {
+  flex: 1;
+  border: none;
+  padding-top: 35px;
+  font-size: 20px;
+} 
+
+.fieldsetDiv{
+  background-color: #24955d;
+  border-radius: 20%;
+  margin-top: -9px;
+}
+
+.fieldsetBrdr{
+  border-radius: 10%;
+}
+

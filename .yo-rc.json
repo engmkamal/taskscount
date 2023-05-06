@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "16.19.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.9.1"
+    },
+    "version": "1.17.1",
+    "libraryName": "taskscount",
+    "libraryId": "e6a80be1-01ca-4be3-9977-8e75665c87b5",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "taskscount",
+    "solutionShortDescription": "taskscount description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
