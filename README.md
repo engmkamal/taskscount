@@ -2,13 +2,10 @@
 
 ## Summary
 
-Short summary on functionality and used technologies.
-
+Short summary:
 This is a SharePoint App that will display the total tasks assiged to the respective logged in user found in the SharePoint Tasks List.
 Used technologies: 1. SpFx, 2.React, 3. @pnp/sp version 3;
-
-[picture of the solution in action, if possible]
-<p>View click on each Workflow of Landing page:</p> 
+ 
 <p style="text-align: center;"><img src="https://github.com/engmkamal/taskscount/blob/main/src/webparts/taskscount/assets/taskscount_Output.jpg"></p>
 
 ## Used SharePoint Framework Version
@@ -24,13 +21,13 @@ Used technologies: 1. SpFx, 2.React, 3. @pnp/sp version 3;
 
 ## Prerequisites
 
-> Any special pre-requisites?
+> SharePoint Tasks List with columns named 'AssignedTo' and 'DelegateUser' both of field type 'Person or Group' (multiple person)
 
 ## Solution
 
-| Solution    | Author(s)                                               |
-| ----------- | ------------------------------------------------------- |
-| folder name | Author details (name, company, twitter alias with link) |
+| Solution             | Author(s)                                                                                          |
+| -------------------- | -------------------------------------------------------------------------------------------------- |
+| [folder name](./src) | Author details (Mostafa Kamal, Berger Tech Consulting Limited, https://www.linkedin.com/in/eng-mkamal) |
 
 ## Version history
 
@@ -50,9 +47,9 @@ Used technologies: 1. SpFx, 2.React, 3. @pnp/sp version 3;
 - Clone this repository
 - Ensure that you are at the solution folder
 - in the command-line run:
-  - **npm install**
+  - **npm install** 
   - **gulp serve**
-
+- Ensure both the dependencies as well as dev-dependencies are being installed properly before running - **gulp serve** 
 > Include any additional steps as needed.
 
 ## Features
@@ -61,9 +58,9 @@ Description of the extension that expands upon high-level summary above.
 
 This extension illustrates the following concepts:
 
-- topic 1
-- topic 2
-- topic 3
+- SharePoint framework SpFx;
+- Integration of React with SpFx;
+- Implementation of @pnp/sp library along with data-grid
 
 > Notice that better pictures and documentation will increase the sample usage and the value you are providing for others. Thanks for your submissions advance.
 
