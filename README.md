@@ -4,7 +4,12 @@
 
 Short summary on functionality and used technologies.
 
+This is a SharePoint App that will display the total tasks assiged to the respective logged in user found in the SharePoint Tasks List.
+Used technologies: 1. SpFx, 2.React, 3. @pnp/sp version 3;
+
 [picture of the solution in action, if possible]
+<p>View click on each Workflow of Landing page:</p> 
+<p style="text-align: center;"><img src="https://github.com/engmkamal/taskscount/blob/main/src/webparts/taskscount/assets/taskscount_Output.jpg"></p>
 
 ## Used SharePoint Framework Version
 
@@ -71,3 +76,13 @@ This extension illustrates the following concepts:
 - [Use Microsoft Graph in your solution](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis)
 - [Publish SharePoint Framework applications to the Marketplace](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/publish-to-marketplace-overview)
 - [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp) - Guidance, tooling, samples and open-source controls for your Microsoft 365 development
+
+## CLI
+Creating new app: yo @microsoft/sharepoint
+Run in (https://zlhzl.sharepoint.com/sites/togvloungeuat/_layouts/15/workbench.aspx) : gulp serve --nobrowser
+Creating Bundle (for production): gulp bundle --ship                       
+Creating SharePoint Package (for production):gulp package-solution --ship
+
+## Environment Setup
+Replace existing Tanent url with your Tananet Url in ...\taskscount\config\serve.json file 
+Replace existing SharePoint Tasks List veriable named 'LIST_NAME' with your SharePoint Tasks List in .....\taskslist\taskslist-spfx\src\webparts\taskslistSpfx\components\TaskslistSpfx.tsx
