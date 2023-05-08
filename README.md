@@ -2,9 +2,11 @@
 
 ## Summary
 
-Short summary on functionality and used technologies.
-
-[picture of the solution in action, if possible]
+Short summary:
+This is a SharePoint App that will display the total tasks assiged to the respective logged in user found in the SharePoint Tasks List.
+Used technologies: 1. SpFx, 2.React, 3. @pnp/sp version 3;
+ 
+<p style="text-align: center;"><img src="https://github.com/engmkamal/taskscount/blob/main/src/webparts/taskscount/assets/taskscount_Output.jpg"></p>
 
 ## Used SharePoint Framework Version
 
@@ -19,13 +21,13 @@ Short summary on functionality and used technologies.
 
 ## Prerequisites
 
-> Any special pre-requisites?
+> SharePoint Tasks List with columns named 'AssignedTo' and 'DelegateUser' both of field type 'Person or Group' (multiple person)
 
 ## Solution
 
-| Solution    | Author(s)                                               |
-| ----------- | ------------------------------------------------------- |
-| folder name | Author details (name, company, twitter alias with link) |
+| Solution             | Author(s)                                                                                          |
+| -------------------- | -------------------------------------------------------------------------------------------------- |
+| [folder name](./src) | Author details (Mostafa Kamal, Berger Tech Consulting Limited, https://www.linkedin.com/in/eng-mkamal) |
 
 ## Version history
 
@@ -45,9 +47,9 @@ Short summary on functionality and used technologies.
 - Clone this repository
 - Ensure that you are at the solution folder
 - in the command-line run:
-  - **npm install**
+  - **npm install** 
   - **gulp serve**
-
+- Ensure both the dependencies as well as dev-dependencies are being installed properly before running - **gulp serve** 
 > Include any additional steps as needed.
 
 ## Features
@@ -56,9 +58,9 @@ Description of the extension that expands upon high-level summary above.
 
 This extension illustrates the following concepts:
 
-- topic 1
-- topic 2
-- topic 3
+- SharePoint framework SpFx;
+- Integration of React with SpFx;
+- Implementation of @pnp/sp library along with data-grid
 
 > Notice that better pictures and documentation will increase the sample usage and the value you are providing for others. Thanks for your submissions advance.
 
@@ -71,3 +73,13 @@ This extension illustrates the following concepts:
 - [Use Microsoft Graph in your solution](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis)
 - [Publish SharePoint Framework applications to the Marketplace](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/publish-to-marketplace-overview)
 - [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp) - Guidance, tooling, samples and open-source controls for your Microsoft 365 development
+
+## CLI
+Creating new app: yo @microsoft/sharepoint
+Run in (https://zlhzl.sharepoint.com/sites/togvloungeuat/_layouts/15/workbench.aspx) : gulp serve --nobrowser
+Creating Bundle (for production): gulp bundle --ship                       
+Creating SharePoint Package (for production):gulp package-solution --ship
+
+## Environment Setup
+Replace existing Tanent url with your Tananet Url in ...\taskscount\config\serve.json file 
+Replace existing SharePoint Tasks List veriable named 'LIST_NAME' with your SharePoint Tasks List in .....\taskslist\taskslist-spfx\src\webparts\taskslistSpfx\components\TaskslistSpfx.tsx
