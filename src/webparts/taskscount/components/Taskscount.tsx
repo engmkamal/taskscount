@@ -50,7 +50,7 @@ export class PnPjsV3State implements IPnPjsV3State {
 
 export default class Taskscount extends React.Component<ITaskscountProps, IPnPjsV3State, {}> {
 
-  private LIST_NAME: string = "PTasks1";
+  private LIST_NAME: string = "Tasks";
   private _sp: SPFI;
 
   constructor(props: ITaskscountProps) {
@@ -76,14 +76,14 @@ export default class Taskscount extends React.Component<ITaskscountProps, IPnPjs
 
       const response: any[] = await this._sp.web.lists.getByTitle(this.LIST_NAME).items
       .orderBy("ID", false)
-      .filter("AssignedToId ne null or DelegateUserId ne null")
-      .select("AssignedToId", "DelegateUserId")
+      .filter("Status eq 'Pending' and (AssignedToId ne null or DelegateUserId ne null)")
+      .select("AssignedToId", "DelegateUserId", "Status")
       .top(100)();
 
       items = await (response.filter((item: any) => {
 
-        return (item.AssignedToId != null && item.AssignedToId.includes(userId )
-        || item.DelegateUserId != null && item.DelegateUserId.includes(userId))
+        return (item.Status == 'Pending' && item.AssignedToId != null && item.AssignedToId.includes(userId )
+        || item.Status == 'Pending' && item.DelegateUserId != null && item.DelegateUserId.includes(userId))
 
       }));
 
@@ -104,14 +104,14 @@ export default class Taskscount extends React.Component<ITaskscountProps, IPnPjs
 
       const response2: any[] = await this._sp.web.lists.getByTitle(this.LIST_NAME).items
       .orderBy("ID", false)
-      .filter("AssignedToId ne null or DelegateUserId ne null")
-      .select("AssignedToId", "DelegateUserId")      
+      .filter("Status eq 'Pending' and (AssignedToId ne null or DelegateUserId ne null)")
+      .select("AssignedToId", "DelegateUserId", "Status")      
       .top(500)()
 
       items = await (response2.filter((item: any) => {
 
-        return (item.AssignedToId != null && item.AssignedToId.includes(userId )
-        || item.DelegateUserId != null && item.DelegateUserId.includes(userId))
+        return (item.Status == 'Pending' && item.AssignedToId != null && item.AssignedToId.includes(userId )
+        || item.Status == 'Pending' && item.DelegateUserId != null && item.DelegateUserId.includes(userId))
 
       }));
 
@@ -131,14 +131,14 @@ export default class Taskscount extends React.Component<ITaskscountProps, IPnPjs
        const userId = await user.Id;
       const response3: any[] = await this._sp.web.lists.getByTitle(this.LIST_NAME).items
       .orderBy("ID", false)
-      .filter("AssignedToId ne null or DelegateUserId ne null")
-      .select("AssignedToId", "DelegateUserId")      
+      .filter("Status eq 'Pending' and (AssignedToId ne null or DelegateUserId ne null)")
+      .select("AssignedToId", "DelegateUserId", "Status")      
       .top(5000)()
 
       items = await (response3.filter((item: any) => {
 
-        return (item.AssignedToId != null && item.AssignedToId.includes(userId )
-        || item.DelegateUserId != null && item.DelegateUserId.includes(userId))
+        return (item.Status == 'Pending' && item.AssignedToId != null && item.AssignedToId.includes(userId )
+        || item.Status == 'Pending' && item.DelegateUserId != null && item.DelegateUserId.includes(userId))
 
       }));
 
@@ -158,13 +158,13 @@ export default class Taskscount extends React.Component<ITaskscountProps, IPnPjs
        const userId = await user.Id;
 
       const response3: any[] = await this._sp.web.lists.getByTitle(this.LIST_NAME).items
-      .select("AssignedToId", "DelegateUserId")
+      .select("AssignedToId", "DelegateUserId", "Status")
       .getAll()     
 
       items = await (response3.filter((item: any) => {
 
-        return (item.AssignedToId != null && item.AssignedToId.includes(userId )
-        || item.DelegateUserId != null && item.DelegateUserId.includes(userId))
+        return (item.Status == 'Pending' && (item.AssignedToId != null && item.AssignedToId.includes(userId ))
+        || item.Status == 'Pending' && (item.DelegateUserId != null && item.DelegateUserId.includes(userId)))
 
       }));
 
@@ -180,7 +180,7 @@ export default class Taskscount extends React.Component<ITaskscountProps, IPnPjs
     return (
         
       <div className={styles.container} >
-        <a style={{textDecoration: 'none'}} className={styles.links} href="https://banglalinkdigitalcomm.sharepoint.com/sites/vloungeonline/SitePages/Taskslist.aspx">
+        <a style={{textDecoration: 'none'}} className={styles.links} href="https://banglalinkdigitalcomm.sharepoint.com/sites/vloungeonline/SitePages/Pending-Task.aspx">
           <div className={styles.flexContainer} >
           
             <div className={styles.flexChild} >
