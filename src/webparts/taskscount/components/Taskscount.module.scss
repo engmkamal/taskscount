@@ -105,78 +105,78 @@
 }
 
 .skCubeGrid {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   margin: 0px;
 }
 
 .skCubeGrid .skCube {
-  width: 33%;
-  height: 33%;
+  //width: 23%;
+  //height: 23%;
   background-color: whitesmoke;
   float: left;
   animation: skCubeGridScaleDelay 1.3s infinite ease-in-out;
 }
 
-.skCube1 {
-  width: 33%;
-  height: 33%;
-  background-color: whitesmoke;
-  float: left;
-  animation: skCubeGridScaleDelay 1.3s infinite ease-in-out;
-  animation-delay: 0.2s;
-}
+// .skCube1 {
+//   width: 33%;
+//   height: 33%;
+//   background-color: whitesmoke;
+//   float: left;
+//   animation: skCubeGridScaleDelay 1.3s infinite ease-in-out;
+//   animation-delay: 0.2s;
+// }
 
-.skCube2 {
-  width: 33%;
-  height: 33%;
-  background-color: whitesmoke;
-  float: left;
-  animation: skCubeGridScaleDelay 1.3s infinite ease-in-out;
-  animation-delay: 0.3s;
-}
+// .skCube2 {
+//   width: 33%;
+//   height: 33%;
+//   background-color: whitesmoke;
+//   float: left;
+//   animation: skCubeGridScaleDelay 1.3s infinite ease-in-out;
+//   animation-delay: 0.3s;
+// }
 
-.skCube3 {
-  width: 33%;
-  height: 33%;
-  background-color: whitesmoke;
-  float: left;
-  animation: skCubeGridScaleDelay 1.3s infinite ease-in-out;
-  animation-delay: 0.4s;
-}
+// .skCube3 {
+//   width: 33%;
+//   height: 33%;
+//   background-color: whitesmoke;
+//   float: left;
+//   animation: skCubeGridScaleDelay 1.3s infinite ease-in-out;
+//   animation-delay: 0.4s;
+// }
 
-.skCubeGrid .skCube4 {
-  animation-delay: 0.1s;
-}
+// .skCubeGrid .skCube4 {
+//   animation-delay: 0.1s;
+// }
 
-.skCubeGrid .skCube5 {
-  animation-delay: 0.2s;
-}
+// .skCubeGrid .skCube5 {
+//   animation-delay: 0.2s;
+// }
 
-.skCubeGrid .skCube6 {
-  animation-delay: 0.3s;
-}
+// .skCubeGrid .skCube6 {
+//   animation-delay: 0.3s;
+// }
 
-.skCubeGrid .skCube7 {
-  animation-delay: 0s;
-}
+// .skCubeGrid .skCube7 {
+//   animation-delay: 0s;
+// }
 
-.skCubeGrid .skCube8 {
-  animation-delay: 0.1s;
-}
+// .skCubeGrid .skCube8 {
+//   animation-delay: 0.1s;
+// }
 
-.skCubeGrid .skCube9 {
-  animation-delay: 0.2s;
-}
+// .skCubeGrid .skCube9 {
+//   animation-delay: 0.2s;
+// }
 
-@keyframes skCubeGridScaleDelay {
-  0%,
-  70%,
-  100% {
-    transform: scale3D(1, 1, 1);
-  }
-  35% {
-    transform: scale3D(0, 0, 1);
-  }
-}
+// @keyframes skCubeGridScaleDelay {
+//   0%,
+//   70%,
+//   100% {
+//     transform: scale3D(1, 1, 1);
+//   }
+//   35% {
+//     transform: scale3D(0, 0, 1);
+//   }
+// }
 

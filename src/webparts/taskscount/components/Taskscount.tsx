@@ -184,7 +184,7 @@ export default class Taskscount extends React.Component<ITaskscountProps, IPnPjs
                     <div className="progress-container">
                       <CircularProgressbar value={this.state.percentage} text={`${this.state.percentage}%`} />
                     </div>
-                    <p style={{fontSize: '14px', color:'whitesmoke', marginTop: '0px'}}>Loading...</p>
+                    <p style={{fontSize: '12px', color:'whitesmoke', marginTop: '0px'}}>Loading...</p>
                   </div>
                 ) : (
                   <div >                  
